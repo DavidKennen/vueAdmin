@@ -8,8 +8,10 @@ Vue.use(ElementUI);
 import Blob from './vendor/Blob'
 import Export2Excel from './vendor/Export2Excel.js'
 import "./components/index"
+import echarts from 'echarts';
 
 Vue.config.productionTip = false
+Vue.prototype.$echarts = echarts
 
 
 new Vue({

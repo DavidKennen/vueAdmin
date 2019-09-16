@@ -8,7 +8,7 @@
       <el-container id="el-container">
         <el-aside width="200px">
           <Silder>
-            <router-link to="/task/index">
+            <router-link to="/task/console">
               <span class="circle"></span> 作业控制台
             </router-link>
             <router-link to="/task/store">

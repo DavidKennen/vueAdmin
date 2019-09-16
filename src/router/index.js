@@ -6,6 +6,7 @@ import store from "../store"
 let isLogin = store.state.login.cookies;
 import prevent from "./prevent"
 import home from "./home"
+import task from "./task"
 
 const router = new Router({
     mode: 'history',
@@ -23,7 +24,8 @@ const router = new Router({
 
         },
         prevent,
-        home
+        home,
+        task
     ]
 })
 

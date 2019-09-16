@@ -1,0 +1,69 @@
+import store from "../../store"
+let isLogin = store.state.login.cookies;
+export default  {
+    path: '/task',
+    name: 'task',
+    component: () =>import (  '../../views/Task'),
+    redirect:"/task/console",
+    meta:{
+        AuthToken:isLogin
+    },
+    children:[
+        {
+            path:"category",
+            component:()=>import("../../views/Task/child/category"),
+            name:"category",
+            meta:{
+                AuthToken:isLogin
+            }
+        },
+        {
+            path:"console",
+            component:()=>import("../../views/Task/child/console"),
+            name:"console",
+            meta:{
+                AuthToken:isLogin
+            }
+        },
+        {
+            path:"file",
+            component:()=>import("../../views/Task/child/file"),
+            name:"file",
+            meta:{
+                AuthToken:isLogin
+            }
+        },
+        {
+            path:"link",
+            component:()=>import("../../views/Task/child/link"),
+            name:"link",
+            meta:{
+                AuthToken:isLogin
+            }
+        },
+        {
+            path:"process",
+            component:()=>import("../../views/Task/child/process"),
+            name:"process",
+            meta:{
+                AuthToken:isLogin
+            }
+        },
+        {
+            path:"store",
+            component:()=>import("../../views/Task/child/store"),
+            name:"store",
+            meta:{
+                AuthToken:isLogin
+            }
+        },
+        {
+            path:"terminal",
+            component:()=>import("../../views/Task/child/terminal"),
+            name:"terminal",
+            meta:{
+                AuthToken:isLogin
+            }
+        }
+    ]
+}

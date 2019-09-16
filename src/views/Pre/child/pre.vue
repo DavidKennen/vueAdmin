@@ -68,7 +68,7 @@
       >
         <el-table-column type="selection" width="40"></el-table-column>
         <el-table-column label="患者姓名" width="110" prop="name"></el-table-column>
-        <el-table-column prop="medical" label="医疗机构" width="110" ></el-table-column>
+        <el-table-column prop="medical" label="医疗机构" width="110"></el-table-column>
         <el-table-column prop="business" label="业务类型" show-overflow-tooltip></el-table-column>
         <el-table-column prop="agreement" label="协定方" show-overflow-tooltip></el-table-column>
         <el-table-column prop="state" label="当前状态" show-overflow-tooltip></el-table-column>
@@ -87,6 +87,15 @@
           </template>
         </el-table-column>
       </el-table>
+      <div class="block">
+        <el-pagination
+          @current-change="handleCurrentChange"
+          background
+          :page-sizes="[20]"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="400"
+        ></el-pagination>
+      </div>
     </div>
   </div>
 </template>
@@ -99,25 +108,30 @@ export default {
       endDate: "",
       tableData: [
         {
-          index:0,
+          index: 0,
           name: "患者姓名",
-          medical:"医疗机构",
-          business:"业务类型",
-          agreement:"协定方",
-          state:"当前状态",
-          task:"当前作业状态",
-          doctor:"医生名字",
-          require:"配送要求",
-          num:"快递单号",
-          phone:"手机号",
+          medical: "医疗机构",
+          business: "业务类型",
+          agreement: "协定方",
+          state: "当前状态",
+          task: "当前作业状态",
+          doctor: "医生名字",
+          require: "配送要求",
+          num: "快递单号",
+          phone: "手机号",
           from: "来源"
-        }
+        },
+       
       ],
       multipleSelection: []
     };
   },
 
   methods: {
+   
+      handleCurrentChange(val) {
+        console.log(`当前页: ${val}`);
+      },
     toggleSelection(rows) {
       if (rows) {
         rows.forEach(row => {
@@ -130,36 +144,36 @@ export default {
     handleSelectionChange(val) {
       this.multipleSelection = val;
     },
-    handleadd(index){
-      console.log(111,index)
-
+    handleadd(index) {
+      console.log(111, index);
     },
-    handledelect(){
-      console.log(222)
+    handledelect() {
+      console.log(222);
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.block{margin-top:10px;}
 .box {
   margin-top: 10px;
- 
+
   .operation {
     display: flex;
-    div{
+    div {
       cursor: pointer;
     }
-    
+
     div:nth-of-type(1) {
       margin-right: 10px;
       margin-left: 5px;
     }
-    div:nth-of-type(1):hover{
-      color:rgb(0,128,0);
+    div:nth-of-type(1):hover {
+      color: rgb(0, 128, 0);
     }
-    div:nth-of-type(2):hover{
-      color:rgb(255,153,0);
+    div:nth-of-type(2):hover {
+      color: rgb(255, 153, 0);
     }
   }
 }

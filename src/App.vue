@@ -20,10 +20,11 @@
   color: #333;
 }
 
-.el-main {
+body .el-main {
   background-color: #fff;
   color: #333;
   text-align: center;
+  overflow: hidden;
 }
 
 body > .el-container {

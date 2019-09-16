@@ -188,7 +188,7 @@ export default {
       line-height: 50px;
       padding-left: 10px;
       text-align: left;
-      width: 1231px;
+      width: 1230px;
       height: 50px;
       background-color: rgba(243, 243, 243, 1);
       box-sizing: border-box;

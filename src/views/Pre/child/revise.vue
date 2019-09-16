@@ -142,7 +142,7 @@ export default {
   }
 }
 .select {
-  width: 1231px;
+  width: 1230px;
   display: flex;
   clear: both;
   .box-left {
@@ -164,7 +164,7 @@ export default {
       line-height: 50px;
       padding-left: 10px;
       text-align: left;
-      width: 1231px;
+      width: 1230px;
       height: 50px;
       background-color: rgba(243, 243, 243, 1);
       box-sizing: border-box;
@@ -181,7 +181,7 @@ export default {
       }
       position: relative;
       padding: 10px 10px 0 13px;
-      width: 1231px;
+      width: 1230px;
       height: 119px;
       background: inherit;
       background-color: rgba(255, 255, 255, 1);
